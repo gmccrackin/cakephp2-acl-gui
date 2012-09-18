@@ -14,7 +14,7 @@ class AclManagerComponent extends Component
 
 	/****************************************************************************************/
     
-    public function initialize(&$controller)
+    public function initialize(Controller $controller)
 	{
 	    $this->controller = $controller;
 	    $this->controllers_hash_file = CACHE . 'persistent' . DS . 'controllers_hashes.txt';
