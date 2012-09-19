@@ -247,6 +247,9 @@ class AclReflectorComponent extends Component
 	{
 	    $controller_classname = $this->get_controller_classname($controller_classname);
 	    
+		//Just in case we forgot
+		App::import('Controller', str_replace('Controller', '', $controller_classname));
+
 		$methods = get_class_methods($controller_classname);
 		
 		if(isset($methods) && !empty($methods))
